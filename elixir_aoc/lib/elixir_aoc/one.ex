@@ -1,4 +1,6 @@
 defmodule ElixirAoc.One do
+
+  def input_file(), do: "1.txt"
   def solve(input)  do
     sums(input)
     |> Enum.max()
