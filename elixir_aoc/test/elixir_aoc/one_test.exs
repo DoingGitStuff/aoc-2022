@@ -1,4 +1,4 @@
-defmodule ElixirAoc.OneTest do
+defmodule ElixirAocTest.One do
   use ExUnit.Case
   doctest ElixirAoc.One
   @example """
@@ -17,7 +17,7 @@ defmodule ElixirAoc.OneTest do
 
   10000
   """ |> String.trim()
-  @example_solution 24000
+  @example_solution 24_000
 
 
   test "passes example given" do
@@ -28,9 +28,9 @@ defmodule ElixirAoc.OneTest do
     assert ElixirAoc.One.sums(@example) == [
       6000,
       4000,
-      11000,
-      24000,
-      10000
+      11_000,
+      24_000,
+      10_000
     ]
   end
 end
