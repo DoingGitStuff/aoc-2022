@@ -3,6 +3,7 @@ defmodule Mix.Tasks.Solutions do
 
   @solutions %{
     "1" => ElixirAoc.One,
+    "1.2" => ElixirAoc.Onetwo,
   }
 
   def run(args) do
