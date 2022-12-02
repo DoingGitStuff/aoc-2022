@@ -13,7 +13,7 @@ defmodule Mix.Tasks.Solutions do
 
     run_order =
       solutions_keys
-      |> Enum.filter(&(length(args) == 0 or &1 in args))
+      |> Enum.filter(&(args == [] or &1 in args))
       |> :lists.sort()
 
     for k <- run_order do
