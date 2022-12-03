@@ -4,7 +4,7 @@ defmodule ElixirAoc.Twotwo do
   def solve(input) do
     input
     |> ElixirAoc.Two.split()
-    |> Enum.map(fn [a,b] -> [ElixirAoc.Two.parse(a), b] end)
+    |> Enum.map(fn [a, b] -> [ElixirAoc.Two.parse(a), b] end)
     |> Enum.map(&apply(__MODULE__, :resolve, &1))
     |> Enum.map(fn x -> apply(&ElixirAoc.Two.score/2, x) end)
     |> Enum.sum()
