@@ -37,6 +37,5 @@ defmodule ElixirAocTest.TwoTwo do
              ["B", "X"],
              ["C", "Z"]
            ]
-
   end
 end

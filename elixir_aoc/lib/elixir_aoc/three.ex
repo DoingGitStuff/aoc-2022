@@ -1,5 +1,6 @@
 defmodule ElixirAoc.Three do
   def input_file(), do: "3.txt"
+
   def solve(input) do
     input
     |> String.split("\n")
@@ -19,7 +20,4 @@ defmodule ElixirAoc.Three do
     |> MapSet.to_list()
     |> hd()
   end
-
-  def find_dup([a, a | _rest]), do: a
-  def find_dup([_ | rest]), do: find_dup(rest)
 end

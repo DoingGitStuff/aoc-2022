@@ -8,9 +8,10 @@ defmodule ElixirAoc.One do
 
   def items(input) when is_bitstring(input) do
     String.split(input, "\n")
-      |> Enum.map(&Integer.parse(&1))
-      |> Enum.map(fn {a, _b} -> a end)
+    |> Enum.map(&Integer.parse(&1))
+    |> Enum.map(fn {a, _b} -> a end)
   end
+
   def sums(input) do
     for group <- String.split(input, "\n\n") do
       group

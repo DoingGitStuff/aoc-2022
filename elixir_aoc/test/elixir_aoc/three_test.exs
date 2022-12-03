@@ -8,7 +8,8 @@ defmodule ElixirAoc.ThreeTest do
            wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
            ttgJtRGJQctTZtZT
            CrZsJsPPZsGzwwsLwLmpwMDw
-           """ |> String.trim()
+           """
+           |> String.trim()
 
   @example_solution 157
 
