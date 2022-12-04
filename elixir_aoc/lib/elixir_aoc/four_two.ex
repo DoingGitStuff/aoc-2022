@@ -8,7 +8,10 @@ defmodule ElixirAoc.FourTwo do
     |> Enum.count(&overlaps/1)
   end
 
-  def overlaps({a1,a2,b1,b2}) do
-    (a2 >= b1) or (a1 >= b2)
+  def overlaps({a1, a2, b1, b2}) do
+    MapSet.intersection(MapSet.new(a1..a2), MapSet.new(b1..b2))
+    |> MapSet.to_list()
+    |> length()
+    |> (fn x -> x != 0 end).()
   end
 end
