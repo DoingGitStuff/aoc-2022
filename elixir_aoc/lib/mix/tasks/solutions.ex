@@ -10,6 +10,7 @@ defmodule Mix.Tasks.Solutions do
     "3.2" => ElixirAoc.ThreeTwo,
     "4" => ElixirAoc.Four,
     "4.2" => ElixirAoc.FourTwo,
+    "5" => ElixirAoc.Five,
   }
 
   def run(args) do
