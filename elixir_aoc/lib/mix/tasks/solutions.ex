@@ -3,6 +3,14 @@ defmodule Mix.Tasks.Solutions do
 
   @solutions %{
     "1" => ElixirAoc.One,
+    "1.2" => ElixirAoc.Onetwo,
+    "2" => ElixirAoc.Two,
+    "2.2" => ElixirAoc.Twotwo,
+    "3" => ElixirAoc.Three,
+    "3.2" => ElixirAoc.ThreeTwo,
+    "4" => ElixirAoc.Four,
+    "4.2" => ElixirAoc.FourTwo,
+    "5" => ElixirAoc.Five,
   }
 
   def run(args) do
@@ -12,21 +20,22 @@ defmodule Mix.Tasks.Solutions do
 
     run_order =
       solutions_keys
-      |> Enum.filter(&(length(args) == 0 or &1 in args))
+      |> Enum.filter(&(args == [] or &1 in args))
       |> :lists.sort()
 
     for k <- run_order do
-      mod = Map.get(@solutions,k)
-      input_file = apply(mod,:input_file,[])
-      priv_dir = Path.join([".","priv"])
-      filepath = Path.join([priv_dir,input_file])
+      mod = Map.get(@solutions, k)
+      input_file = apply(mod, :input_file, [])
+      priv_dir = Path.join([".", "priv"])
+      filepath = Path.join([priv_dir, input_file])
 
       exists = File.exists?(filepath)
       IO.puts("#{filepath} exists=#{exists}")
+
       if exists do
-        {:ok,input_txt} = File.read(filepath)
+        {:ok, input_txt} = File.read(filepath)
         input = String.trim(input_txt)
-        IO.puts("#{k} = #{apply(mod,:solve,[input])}")
+        IO.puts("#{k} = #{apply(mod, :solve, [input])}")
       end
     end
   end
