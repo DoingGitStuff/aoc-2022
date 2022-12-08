@@ -15,6 +15,7 @@ defmodule Mix.Tasks.Solutions do
     "6" => ElixirAoc.Six,
     "6.2" => ElixirAoc.SixTwo,
     "7" => ElixirAoc.Seven,
+    "7.2" => ElixirAoc.SevenTwo
   }
 
   def run(args) do
@@ -34,7 +35,10 @@ defmodule Mix.Tasks.Solutions do
       filepath = Path.join([priv_dir, input_file])
 
       exists = File.exists?(filepath)
-      IO.puts("#{filepath} exists=#{exists}")
+
+      unless exists do
+        IO.puts("#{filepath} exists=#{exists}")
+      end
 
       if exists do
         {:ok, input_txt} = File.read(filepath)
