@@ -1,5 +1,5 @@
-defmodule ElixirAoc.Six do
-  def input_file(), do: "6.txt"
+defmodule ElixirAoc.Seven do
+  def input_file(), do: "7.txt"
 
   def solve(input) do
     input

@@ -1,4 +1,4 @@
-defmodule ElixirAoc.SixTest do
+defmodule ElixirAoc.SevenTest do
   use ExUnit.Case
 
   alias ElixirAoc.Six
