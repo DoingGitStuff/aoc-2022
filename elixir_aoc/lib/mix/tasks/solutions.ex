@@ -13,6 +13,7 @@ defmodule Mix.Tasks.Solutions do
     "5" => ElixirAoc.Five,
     "5.2" => ElixirAoc.FiveTwo,
     "6" => ElixirAoc.Six,
+    "6.2" => ElixirAoc.SixTwo,
     "7" => ElixirAoc.Seven,
   }
 
